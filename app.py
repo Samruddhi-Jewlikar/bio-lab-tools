@@ -50,11 +50,9 @@ if calculator == "Home":
         st.write("Plan sample and control positions on a plate.")
 
 elif calculator == "Dilution Calculator":
-    st.subheader("🧪 Dilution Calculator")
-    st.info(
-        "Your dilution calculator is ready to connect. "
-        "We'll integrate its existing code in the next step."
-    )
+    from Dilution_calculator import show_calculator
+
+    show_calculator()
 
 elif calculator == "Molarity Calculator":
     st.subheader("⚗️ Molarity Calculator")
