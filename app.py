@@ -23,7 +23,8 @@ calculator = st.sidebar.selectbox(
         "Molarity Calculator",
         "Protein Concentration Calculator",
         "Serial Dilution Calculator",
-        "ELISA Plate Planner"
+        "ELISA Plate Planner",
+        "Buffer & Reagent Preparation Calculator"
     ]
 )
 
@@ -59,12 +60,21 @@ elif calculator == "Molarity Calculator":
     st.info("This calculator is planned for a future update.")
 
 elif calculator == "Protein Concentration Calculator":
-    st.subheader("🧬 Protein Concentration Calculator")
-    st.info("This calculator is planned for a future update.")
+    from protein_concentration_calculator import show_calculator
+
+    show_calculator()
 
 elif calculator == "Serial Dilution Calculator":
-    st.subheader("🧪 Serial Dilution Calculator")
-    st.info("This calculator is planned for a future update.")
+    from serial_dilution_calculator import show_calculator
+
+    show_calculator()
+
+
+elif calculator == "Buffer & Reagent Preparation Calculator":
+    from buffer_reagent_calculator import show_calculator
+
+    show_calculator()
+
 
 elif calculator == "ELISA Plate Planner":
     st.subheader("🧫 ELISA Plate Planner")
